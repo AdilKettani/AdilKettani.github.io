@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <!-- https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP -->
+ 
+    <link href="./styles.css" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script defer src = "renderer.js"></script>
+    <title>Hello World!</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css">
+  </head>
+  <body>
+    <header>
+      <a href="#" class="brand">WebTemp</a>
+      <div class="menu-btn"></div>
+      <div class="navigation">
+        <div class="navigation-items">
+          <a href="#">Template</a>
+          <a href="#">About Us</a>
+          <a href="#">How To use</a>
+          <a href="#">Hosting</a>
+        </div>
+      </div>
+      
+    </header>
+    <section class="home">
+      <video class="video-slide active" src="./videos/1.mp4" autoplay muted loop></video>
+      <video class="video-slide" src="./videos/2.mp4" autoplay muted loop></video>
+      <video class="video-slide" src="./videos/3.mp4" autoplay muted loop></video>
+      <video class="video-slide" src="./videos/4.mp4" autoplay muted loop></video>
+      <div class="content active">
+        <h1>Website<br><span>Templates.</span></h1>
+        <h2><u>Find a suitable website for you!</u></h2>
+        <p>We here at WebTemp, provide you multiple website<br>templates to choose from. We make it easy to change<br> while also keeping up the quality. <b>ALL free of cost.</b> </p>
+        <a href="#">Explore Templates</a>
+      </div>
+      <div class="content">
+        <h1>Free Of<br><span>use.</span></h1>
+        <h2><u>Almost every content of our is free of charge.</u></h2>
+        <p>We provide alot of website skins , and almost every one of them is free <br> This helps new websites and buisnesses have a headstart without wasting <br> time creating a website.  </p>
+        <a href="#">Explore Templates</a>
+      </div>
+      <div class="content">
+        <h1>Premium<br><span>Quality.</span></h1>
+        <h2><u>Premium quality websites in store!</u></h2>
+        <p>Even tough we share our website templates for free<br>We try keeping a premium feel to our content as if you payed for it <br> This helps saving up money for more important things. </p>
+        <a href="#">Explore Templates</a>
+      </div>
+      <div class="content">
+        <h1>Easy to<br><span>Setup.</span></h1>
+        <h2><u>Easy to setup the website!</u></h2>
+        <p>We make it easy to setup your website, even for someone who is totally new to web developping.<br>We provide a guide to help you easily change the code to your desire </p>
+        <a href="#">Explore Templates</a>
+      </div>
+      <div class="media-icons">
+        <a href="#"><i class="fab fa-facebook-f"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+      </div>
+      <div class="slider-navigation">
+        <div class="nav-btn active"></div>
+        <div class="nav-btn"></div>
+        <div class="nav-btn"></div>
+        <div class="nav-btn"></div>
+      </div>
+    </section>
+    <script type="text/javascript">
+      window.onload = function () {
+      const menuBtn = document.querySelector(".menu-btn");
+      const navigation = document.querySelector(".navigation");
+      menuBtn.addEventListener("click", () => {
+        menuBtn.classList.toggle("active");
+        navigation.classList.toggle("active");
+    });
+      }
+
+      const btns = document.querySelectorAll(".nav-btn");
+
+      const slides = document.querySelectorAll(".video-slide");
+      
+      const contents = document.querySelectorAll(".content");
+      
+
+      var sliderNav = function(manual){
+      
+        btns.forEach((btn) => {
+          btn.classList.remove("active");
+        })
+        slides.forEach((slide) => {
+          slide.classList.remove("active");
+        })
+        contents.forEach((content) => {
+          content.classList.remove("active");
+        })
+
+        btns[manual].classList.add("active");
+        slides[manual].classList.add("active");
+        contents[manual].classList.add("active");
+      }
+
+      btns.forEach((btn, i) => {
+        btn.addEventListener("click", () => {
+          sliderNav(i);
+        });
+      })
+      </script>
+  </body>
+</html>
