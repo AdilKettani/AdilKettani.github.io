@@ -264,4 +264,239 @@ header .navigation.active .navigation-items{
     background-position: center;
     transition: 0.3s ease;
 }
+
+/* Transition */
+
+/* HERE IS THE ABOUT SECTION AND DOWN */
+
+.aboutsens .about h1{
+  text-align: center;
+  font-family: 'Be Vietnam Pro', sans-serif;
+  margin-top: -39px;
+  color: black;
+  font-size: 2em;
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  line-height: 75px;
+  margin-bottom: -6px;
+}
+.aboutsens{
+  background:white;
+}
+
+.aboutsens .about hr{
+  width: 4.6cm;
+  margin: 0 44% 0 44%;
+  height: 1px;
+  border-radius: 7px 7px 7px 7px;
+  background: black;
+}
+
+.aboutsens .aboutpa p{
+  margin-top: 3%;
+  text-align: center;
+  color:#818181
+}
+
+.container{
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 1200px;
+  flex-wrap: wrap;
+  margin-left: 350px;
+  margin-top: -50px;
+  z-index: 1;
+}
+
+.container .card{
+position: relative;
+width:280px;
+height: 400px;
+margin: 30px;
+box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.5);
+border-radius: 15px;
+background: rgb(70 70 70 / 10%);
+overflow:hidden;
+display: flex;
+justify-content: center;
+align-items: center;
+border-top: 1px solid rgba(255,255,255, 0.5);
+border-left: 1px solid rgba(255,255,255, 0.5);
+backdrop-filter:blur(5px) ;
+}
+.container .card .cacontent{
+  padding: 20px;
+  text-align: center;
+  transform: translateY(100px);
+  opacity: 0;
+  transition: 0.5s;
+}
+
+.container .card:hover .cacontent{
+  transform: translateY(0px);
+  opacity: 1;
+}
+.container .card .cacontent h3{
+  position:absolute;
+  top: -80px;
+  font-family: 'Raleway', sans-serif;
+  right: 10px;
+  font-size: 8em;
+  color: rgba(0, 0 ,0, 0.09);
+  pointer-events: none;
+}
+.container .card .cacontent h1{
+  font-size: 1.8em;
+  font-family: 'Raleway', sans-serif;
+  color: black;
+  z-index: 1;
+}
+.container .card .cacontent p{
+  font-size: 1em;
+  font-family: 'Inter', sans-serif;
+  font-weight: 64px;
+}
+
+
+.hosting .host h1{
+  text-align: center;
+  font-family: 'Be Vietnam Pro', sans-serif;
+  margin-top: -39px;
+  color: black;
+  font-size: 2em;
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  line-height: 75px;
+  margin-bottom: -6px;
+}
+
+.hosting .host hr{
+  width: 4.0cm;
+  margin: -7px 0 0 185px;
+  height: 1px;
+  border-radius: 7px 7px 7px 7px;
+  background: black;
+}
+
+.hosting .hostpa p{
+  margin-top: 3%;
+  line-height: 30px;
+  margin-bottom: 65px;
+  text-align: center;
+  color:#818181
+}
+
+/*
+display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #1680AC;
+  height: 70px;
+  width: 200px;
+  margin: 1cm 0 0 8cm;
+  color: white;
+  font-size: 1.1em;
+  font-weight: 500;
+  text-decoration: none;
+  border-radius: 7px 7px 7px 7px;
+  */
+.hosting .hostpabut {
+  display: flex;
+  justify-content: center;
+  margin-top: -50px;
+  align-items: center;
+}
+.hosting .hostpabut a{
+  position:relative;
+  margin: 0 auto;
+  display: inline-block;
+  padding: 25px 30px;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: rgba(105, 105, 105, 0.4);
+  background:#ffffff;
+  letter-spacing: 2px;
+  font-size: 16px;
+  transition: 0.5s;
+
+}
+.hosting .hostpabut a:hover{
+  color: rgb(0, 0, 0);
+}
+
+.hosting .hostpabut a span{
+  display: block;
+  position: absolute;
+  background: #2894ff;
+}
+.hosting .hostpabut a span:nth-child(1){
+  left: 0;
+  bottom: 0;
+  width: 1px;
+  height: 100%;
+  transform: scaleY(0);
+  transform-origin: top;
+  transition: transform 0.5s;
+}
+.hosting .hostpabut a:hover span:nth-child(1){
+  transform: scaleY(1);
+  transform-origin: bottom;
+  transition: transform 0.5s;
+}
+.hosting .hostpabut a span:nth-child(2){
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 1px;
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 0.5s;
+}
+.hosting .hostpabut a:hover span:nth-child(2){
+  transform: scaleX(1);
+  transform-origin: left;
+  transition: transform 0.5s;
+}
+
+
+.hosting .hostpabut a span:nth-child(3){
+  right: 0;
+  bottom: 0;
+  width: 1px;
+  height: 100%;
+  transform: scaleY(0);
+  transform-origin: top;
+  transition: transform 0.5s;
+  transition-delay: 0.5s;
+}
+.hosting .hostpabut a:hover span:nth-child(3){
+  transform: scaleY(1);
+  transform-origin: bottom;
+  transition: transform 0.5s;
+  transition-delay: 0.5s;
+}
+
+
+.hosting .hostpabut a span:nth-child(4){
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 1px;
+  transform: scaleX(0);
+  transform-origin: top;
+  transition: transform 0.5s;
+  transition-delay: 0.5s;
+}
+.hosting .hostpabut a:hover span:nth-child(4){
+  transform: scaleX(1);
+  transform-origin: left;
+  transition: transform 0.5s;
+  transition-delay: 0.5s;
+}
+
+
 /* Add styles here to customize the appearance of your app */
